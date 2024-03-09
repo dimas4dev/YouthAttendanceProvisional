@@ -2,11 +2,8 @@ import { useState } from 'react';
 import { Link } from 'wouter';
 import { Bars3BottomLeftIcon, XMarkIcon } from '@heroicons/react/24/solid'
 
-import { InputComponent } from '../Input';
 import { useAuth } from '../../../hooks/useAuth';
-import { useStore } from '../../../StatusHandlers/ZustandHandler.mts';
 
-import DisneyIcon from '../../../assets/DisneyIcon.svg';
 
 interface HeaderProps {
     isLogin?: boolean;
@@ -14,7 +11,6 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ isLogin = false }) => {
     const { logout } = useAuth();
-    const { search, setSearch } = useStore();
 
 
     const linksHeader = [
